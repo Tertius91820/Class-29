@@ -20,23 +20,29 @@ console.log(totalCandies)
 //Conditionals And Functions
 //You have a charmander in your party. Charmander can only battle if the temperature is above 0 degrees celcius. Create one function that converts a Fahrenheit value to Celcius and another function that tells you whether or not charmander can battle
 
-function FahrenheitToCelcius (Fahrenheit){
-  return Fahrenheit -32 * 5/9 + "Celsius"
+function fahrenheitToCelcius (Fahrenheit){
+  let celsius = (Fahrenheit -32) * 5/9
+  return celsius
 }
 
-function battleOrNot(Celsius){
-  if(Celsius > 0){
+function battleOrNot(currentCelsius){
+let converted = fahrenheitToCelcius(currentCelsius)
+
+  if(converted > 0){
     console.log("charmander can battle")
   }else{
     console.log("Its too cold")
   }
 }
+battleOrNot(33)
 
 //Loops
 //You have joined an undeground pokemon league. In this league, trainers can use any number of pokemon. Print to the console "Pikachu I choose you" x times where x is the number of pokemon the trainer you are battling has in their party
 
 function pokamonCount(number){
-  for(i = 0 ; i <= number;i++){
+  for(let i = 1 ; i <= number;i++){
     console.log("Pickachu I choose you")
   }
 }
+
+pokamonCount(5)
